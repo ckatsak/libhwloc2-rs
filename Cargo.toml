@@ -1,0 +1,9 @@
+[workspace]
+members = [
+	"hwloc2-sys",
+	"hwloc2-rs",
+]
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
