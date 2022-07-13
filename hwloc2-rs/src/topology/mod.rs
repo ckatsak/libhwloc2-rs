@@ -24,8 +24,9 @@ pub struct Topology {
     support: support::Support,
 }
 
-unsafe impl Sync for Topology {}
-unsafe impl Send for Topology {}
+// Thread Safety in hwloc-2.7.1: https://www.open-mpi.org/projects/hwloc/doc/v2.7.1/a00370.php
+//unsafe impl Sync for Topology {}
+//unsafe impl Send for Topology {}
 
 impl Topology {
     /// Create a new [`TopologyBuilder`] to configure and create a new [`Topology`].
